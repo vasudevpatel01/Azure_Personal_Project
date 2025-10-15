@@ -1,0 +1,9 @@
+{
+	"name": "df-001azureproject",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "116084dd-2176-4f94-9458-94a8730149a1",
+		"tenantId": "220f875f-25cd-4e7e-8719-84ef73f18e10"
+	}
+}
