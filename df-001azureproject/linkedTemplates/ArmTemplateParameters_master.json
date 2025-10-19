@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-001azureproject"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"Azure_Sql_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://vasudev001storage.dfs.core.windows.net/"
+		},
+		"Azure_Sql_properties_typeProperties_server": {
+			"value": "azureprojectservervasudev.database.windows.net"
+		},
+		"Azure_Sql_properties_typeProperties_database": {
+			"value": "azureprojectdbvasudev"
+		},
+		"Azure_Sql_properties_typeProperties_userName": {
+			"value": "adminvasudev"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
