@@ -20,23 +20,49 @@ Automation: Conditional logic, metadata updates, checkpointing, and a Web activi
 
 ```
 repo-root/
-├─ adf/
-│  ├─ pipelines/
-│  │  └─ incremental_ingestion.json           # ADF pipeline JSON
-├─ databricks/
-│  ├─ notebooks/
-│  │  └─ silver_dim.ipynb                     # silver layer transformations
-│  ├─ jobs/                                   
-│  ├─ dlt/
-│  │  └─ cdc_pipelines.py                     # DLT / auto cdc flows example
-│  └─ libs/
-│     └─ utils/
-│        └─ transform.py                      # helper transform functions
-├─ configs/
-│  ├─ empty.json                              # template used to update cdc.json
-├─ docs/
-│  └─ architecture.md                         # extended architecture notes 
-└─ README.md                                  # this file
+├─ Spotify_dab/                                   # main project folder (your workspace name)
+│  ├─ databricks_pipleine_integrated/             # Databricks code & DLT (note: name kept as provided)
+│  │  ├─ notebooks/
+│  │  │  └─ silver_dim.ipynb                       # silver layer notebook (DimUser, DimTrack, ...)
+│  │  ├─ dlt/
+│  │  │  └─ cdc_pipelines.py                       # DLT / create_auto_cdc_flow scripts
+│  │  ├─ libs/
+│  │  │  └─ utils/
+│  │  │     └─ transform.py                        # helper transform functions
+│  │  ├─ jobs/                                     # Databricks job JSONs
+│  │  └─ requirements.txt                        
+│  │
+│  ├─ dataset/                                     # dataset-related assets
+│  │  └─ Parquet_Dynamic/                          # dataset reference used by ADF sink
+│  │
+│  ├─ factory/
+│  │  └─ df-001azureproject/                       # ADF factory artifact folder (your factory name)
+│  │     ├─ pipelines/
+│  │     │  └─ incremental_ingestion.json          # **ADF pipeline JSON **
+│  │     ├─ datasets/                              # ADF dataset JSONs (AzureSQL, Parquet_Dynamic, Json_Dynamic)
+│  │     │  ├─ AzureSQL.json
+│  │     │  ├─ Parquet_Dynamic.json
+│  │     │  └─ Json_Dynamic.json
+│  │     └─ linkedServices/                         # factory-local linked service definitions
+│  │        └─ AzureDataLakeStorage1.json
+│  │
+│  ├─ linkedService/
+│  │  └─ AzureDataLakeStorage/                     # linked service folder
+│  │     └─ README.md                              # notes about permissions / service principal
+│  │
+│  ├─ pipeline/
+│  │  └─ incremental_ingestion/                    # pipeline-specific assets
+│  │     ├─ incremental_ingestion.json             # copy of pipeline definition 
+│  │     └─ publish_config.json                     # ADF publish config / infra metadata
+│  │
+│  ├─ configs/
+│  │  ├─ empty.json                                # template used by update_last_cdc
+│  │
+│  ├─ README.md                                    # **Project README **
+│  └─ publish_config.json                          # top-level copy 
+│
+└─ .gitignore
+
 ```
 
 
