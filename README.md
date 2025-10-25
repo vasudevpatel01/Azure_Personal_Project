@@ -36,7 +36,7 @@ repo-root/
 │  │  └─ Parquet_Dynamic/                          # dataset reference used by ADF sink
 │  │
 │  ├─ factory/
-│  │  └─ df-001azureproject/                       # ADF factory artifact folder (your factory name)
+│  │  └─ df-001azureproject/                       # ADF factory artifact folder 
 │  │     ├─ pipelines/
 │  │     │  └─ incremental_ingestion.json          # **ADF pipeline JSON **
 │  │     ├─ datasets/                              # ADF dataset JSONs (AzureSQL, Parquet_Dynamic, Json_Dynamic)
