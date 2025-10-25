@@ -20,10 +20,10 @@ Automation: Conditional logic, metadata updates, checkpointing, and a Web activi
 
 ```
 repo-root/
-├─ Spotify_dab/                                   # main project folder (your workspace name)
-│  ├─ databricks_pipleine_integrated/             # Databricks code & DLT (note: name kept as provided)
+├─ Spotify_dab/                                   # main project folder 
+│  ├─ databricks_pipleine_integrated/             # Databricks code & DLT 
 │  │  ├─ notebooks/
-│  │  │  └─ silver_dim.ipynb                       # silver layer notebook (DimUser, DimTrack, ...)
+│  │  │  └─ silver_dim.ipynb                       # silver layer notebook 
 │  │  ├─ dlt/
 │  │  │  └─ cdc_pipelines.py                       # DLT / create_auto_cdc_flow scripts
 │  │  ├─ libs/
